@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:svg_flutter/svg.dart';
+import 'package:vellato/screens/bottom_nav_app_bar/screens_navigate_from_bottomBar/home_screen/register_visit.dart';
 import 'package:vellato/themes/app_colors.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -53,20 +54,20 @@ class _HomeScreenState extends State<HomeScreen> {
           hoverElevation: 0,
           elevation: 0,
           onPressed: () {
-            //Navigator.push(context, MaterialPageRoute(builder: (context)=> const ConversationScreen()));
+            Navigator.push(context, MaterialPageRoute(builder: (context)=> const RegisterVisit()));
           },
           child:
 
-         Icon(Icons.add,color: AppColors.primaryWhite,)),
+         const Icon(Icons.add,color: AppColors.primaryWhite,)),
       body: Padding(
           padding: EdgeInsets.only(top: MediaQuery.of(context).padding.top),
           child: ListView(
             padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
             children: [
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
-              Text(
+              const Text(
                 'Welcome!',
                 style: TextStyle(
                   color: Color(0xFF6C6C6C),
@@ -74,7 +75,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   fontWeight: FontWeight.w500,
                 ),
               ),
-              Text(
+              const Text(
                 'John Doe',
                 style: TextStyle(
                   color: Colors.black,
@@ -82,10 +83,10 @@ class _HomeScreenState extends State<HomeScreen> {
                   fontWeight: FontWeight.w700,
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
-              Text(
+              const Text(
                 'Today’s Visits',
                 style: TextStyle(
                   color: Colors.black,
@@ -93,15 +94,15 @@ class _HomeScreenState extends State<HomeScreen> {
                   fontWeight: FontWeight.w700,
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               GridView.builder(
                 padding: EdgeInsets.zero,
-                physics: NeverScrollableScrollPhysics(),
+                physics: const NeverScrollableScrollPhysics(),
                 shrinkWrap: true,
                 itemCount: visitorList.length,
-                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   childAspectRatio: 1.8,
                     crossAxisCount: 2, mainAxisSpacing: 10, crossAxisSpacing: 10),
                 itemBuilder: (BuildContext context, int index) {
@@ -121,7 +122,7 @@ class _HomeScreenState extends State<HomeScreen> {
       required String occupation,
       required String time}) {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
       decoration: ShapeDecoration(
         color: Colors.white,
         shape: RoundedRectangleBorder(
@@ -131,7 +132,7 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
           borderRadius: BorderRadius.circular(10),
         ),
-        shadows: [
+        shadows: const [
           BoxShadow(
             color: Color(0x07000000),
             blurRadius: 10,
@@ -158,7 +159,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     color: AppColors.primaryColor,
                     "assets/icons/auth_screens/man.svg"),
               ),
-              SizedBox(
+              const SizedBox(
                 width: 8,
               ),
               Column(
@@ -167,13 +168,13 @@ class _HomeScreenState extends State<HomeScreen> {
                 children: [
                   Text(
                     name,
-                    style: TextStyle(
+                    style: const TextStyle(
                       color: AppColors.primaryColor,
                       fontSize: 14,
                       fontWeight: FontWeight.w600,
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 8,
                   ),
                   Text(
@@ -188,10 +189,10 @@ class _HomeScreenState extends State<HomeScreen> {
               )
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
-          Text(
+          const Text(
             'Visit time:',
             style: TextStyle(
               color: Colors.black,
@@ -199,7 +200,7 @@ class _HomeScreenState extends State<HomeScreen> {
               fontWeight: FontWeight.w600,
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 4,
           ),
           Text(

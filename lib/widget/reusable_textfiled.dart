@@ -40,7 +40,9 @@ class ReusableTextForm extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       height: 55,
-      child: TextFormField(
+      child:
+
+      TextFormField(
         obscuringCharacter: '*',
           controller: controller,
           keyboardType: keyboardType,

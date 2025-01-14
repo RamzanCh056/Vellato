@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:svg_flutter/svg_flutter.dart';
+import 'package:vellato/screens/bottom_nav_app_bar/screens_navigate_from_bottomBar/contacts/contact_screen.dart';
+import 'package:vellato/screens/bottom_nav_app_bar/screens_navigate_from_bottomBar/data/data_screen.dart';
 import 'package:vellato/screens/bottom_nav_app_bar/screens_navigate_from_bottomBar/home_screen/home_screen.dart';
+import 'package:vellato/screens/bottom_nav_app_bar/screens_navigate_from_bottomBar/setting_screens/setting_screen.dart';
 
 import '../../themes/app_colors.dart';
 import '../../themes/app_text_styles.dart';
@@ -15,9 +18,9 @@ class BottomNavAppBar extends StatefulWidget {
 class _BottomNavAppBarState extends State<BottomNavAppBar> {
   final List<Widget> _bottomNavItem = [
    HomeScreen(),
-    Container(),
-    Container(),
-    Container(),
+   DataScreen(),
+    ContactScreen(),
+    SettingScreen(),
   ];
   int _currentIndex = 0;
 
